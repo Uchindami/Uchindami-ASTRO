@@ -1,0 +1,38 @@
+---
+export interface Props {
+    title: string;
+}
+
+const {title} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width"/>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+    <meta name="generator" content={Astro.generator}/>
+    <title>{title}</title>
+</head>
+
+<body>
+<main class="">
+    <slot/>
+</main>
+</body>
+</html>
+
+<style>
+
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        background-color: rgb(224, 192, 151) ;
+        color: rgb(0, 0, 0);
+    }
+	html{
+		scroll-behavior: smooth;
+	}
+</style>
